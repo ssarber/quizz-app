@@ -1,4 +1,4 @@
-Simple quizz application I wrote to practice setting and hashing cookies when going through Web Development course on [Udacity](https://www.udacity.com/course/cs253/) 
+Simple quizz application I wrote to practice setting and hashing cookies when going through [Web Development course on Udacity](https://www.udacity.com/course/cs253).
 
 App runs on Google App Engine. URL: http://quizz-app.appspot.com/
 

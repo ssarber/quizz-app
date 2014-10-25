@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% autoescape on %}
+<html>
+  <body>
+	<h1>The mega quizz - attempt at your own risk!</h1>
+		<h3>
+			Ferris Bueller was filmed in what city?
+		</h3>
+		<form action='/answer' method="post">	
+			<select class="cities" name=city_query>
+			{% for city in cities %}
+				<option>{{city.name}}</option>
+				<option>{{city.name}}</option>
+				<option>{{city.name}}</option>
+				<option>{{city.name}}</option>
+			{% endfor %}
+			</select>
+			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			<script type="text/javascript">
+			var usedNames = {};
+			$("select[name='city_query'] > option").each(function () {
+			    if(usedNames[this.text]) {
+			        $(this).remove();
+			    } else {
+			        usedNames[this.text] = this.value;
+			    }
+			});
+			</script>
+			<br>
+			<input type="submit">
+		</form>	
+
+		<h3>
+			The quote "I am the Keymaster! The Destructor is coming. Gozer the Traveler, the Destroyer." comes from what movie?
+		</h3>
+		<form action='/answer' method="post">	
+			<select class="movies" name=movie_query>
+			{% for movie in movies %}
+				<option>{{movie.name}}</option>
+				<option>{{movie.name}}</option>
+				<option>{{movie.name}}</option>
+				<option>{{movie.name}}</option>
+			{% endfor %}
+			</select>
+			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			<script type="text/javascript">
+			var usedNames = {};
+			$("select[name='movie_query'] > option").each(function () {
+			    if(usedNames[this.text]) {
+			        $(this).remove();
+			    } else {
+			        usedNames[this.text] = this.value;
+			    }
+			});
+			</script>
+			<br>
+			<input type="submit">
+		</form>	
+
+		<h3>
+			What car was in "Back to the Future"?	
+		</h3>
+		<form action='/answer' method="post">	
+			<select class="cars" name=car_query>
+			{% for car in cars %}
+				<option>{{car.name}}</option>
+				<option>{{car.name}}</option>
+				<option>{{car.name}}</option>
+				<option>{{car.name}}</option>
+			{% endfor %}
+			</select>
+			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			<script type="text/javascript">
+			var usedNames = {};
+			$("select[name='car_query'] > option").each(function () {
+			    if(usedNames[this.text]) {
+			        $(this).remove();
+			    } else {
+			        usedNames[this.text] = this.value;
+			    }
+			});
+			</script>
+			<br>
+			<input type="submit">
+		</form>	
+  </body>
+</html>
+{% endautoescape %}
